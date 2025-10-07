@@ -6,6 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		DB7670C62DDEC5A60047B9C0 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = DB7670C52DDEC5A60047B9C0 /* Auth */; };
+		DB7670C82DDEC5A60047B9C0 /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = DB7670C72DDEC5A60047B9C0 /* Functions */; };
+		DB7670CE2DE14FA70047B9C0 /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = DB7670CD2DE14FA70047B9C0 /* PostgREST */; };
+		DB7670D62DE152140047B9C0 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = DB7670D52DE152140047B9C0 /* Supabase */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		DB786A612DAF8238005B0ADE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -29,9 +36,22 @@
 		DB786A6A2DAF8238005B0ADE /* StrideUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StrideUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		DB7670D82DE1627A0047B9C0 /* Exceptions for "Stride" folder in "Stride" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = DB786A4F2DAF8235005B0ADE /* Stride */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		DB786A522DAF8235005B0ADE /* Stride */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				DB7670D82DE1627A0047B9C0 /* Exceptions for "Stride" folder in "Stride" target */,
+			);
 			path = Stride;
 			sourceTree = "<group>";
 		};
@@ -52,6 +72,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB7670D62DE152140047B9C0 /* Supabase in Frameworks */,
+				DB7670CE2DE14FA70047B9C0 /* PostgREST in Frameworks */,
+				DB7670C82DDEC5A60047B9C0 /* Functions in Frameworks */,
+				DB7670C62DDEC5A60047B9C0 /* Auth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +96,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB7670CC2DE14FA40047B9C0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DB786A472DAF8235005B0ADE = {
 			isa = PBXGroup;
 			children = (
 				DB786A522DAF8235005B0ADE /* Stride */,
 				DB786A632DAF8238005B0ADE /* StrideTests */,
 				DB786A6D2DAF8238005B0ADE /* StrideUITests */,
+				DB7670CC2DE14FA40047B9C0 /* Frameworks */,
 				DB786A512DAF8235005B0ADE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -112,6 +144,10 @@
 			);
 			name = Stride;
 			packageProductDependencies = (
+				DB7670C52DDEC5A60047B9C0 /* Auth */,
+				DB7670C72DDEC5A60047B9C0 /* Functions */,
+				DB7670CD2DE14FA70047B9C0 /* PostgREST */,
+				DB7670D52DE152140047B9C0 /* Supabase */,
 			);
 			productName = Stride;
 			productReference = DB786A502DAF8235005B0ADE /* Stride.app */;
@@ -195,6 +231,9 @@
 			);
 			mainGroup = DB786A472DAF8235005B0ADE;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				DB7670C42DDEC5A60047B9C0 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = DB786A512DAF8235005B0ADE /* Products */;
 			projectDirPath = "";
@@ -399,6 +438,7 @@
 				DEVELOPMENT_TEAM = 55J6KG4P3U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Stride/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -428,6 +468,7 @@
 				DEVELOPMENT_TEAM = 55J6KG4P3U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Stride/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -558,6 +599,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DB7670C42DDEC5A60047B9C0 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase-community/supabase-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DB7670C52DDEC5A60047B9C0 /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB7670C42DDEC5A60047B9C0 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Auth;
+		};
+		DB7670C72DDEC5A60047B9C0 /* Functions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB7670C42DDEC5A60047B9C0 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Functions;
+		};
+		DB7670CD2DE14FA70047B9C0 /* PostgREST */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB7670C42DDEC5A60047B9C0 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = PostgREST;
+		};
+		DB7670D52DE152140047B9C0 /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB7670C42DDEC5A60047B9C0 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DB786A482DAF8235005B0ADE /* Project object */;
 }
